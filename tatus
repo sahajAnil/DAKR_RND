@@ -1,0 +1,121 @@
+[1mdiff --git a/DAKR_RND/.classpath b/DAKR_RND/.classpath[m
+[1mindex 5f5732e..cb2aa0c 100644[m
+[1m--- a/DAKR_RND/.classpath[m
+[1m+++ b/DAKR_RND/.classpath[m
+[36m@@ -1,6 +1,6 @@[m
+ <?xml version="1.0" encoding="UTF-8"?>[m
+ <classpath>[m
+[31m-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-18.0.2.1">[m
+[32m+[m	[32m<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-18">[m
+ 		<attributes>[m
+ 			<attribute name="module" value="true"/>[m
+ 		</attributes>[m
+[1mdiff --git a/DAKR_RND/bin/CollectionsAndBasics/LinkedList.class b/DAKR_RND/bin/CollectionsAndBasics/LinkedList.class[m
+[1mindex e73ced6..e435ccb 100644[m
+Binary files a/DAKR_RND/bin/CollectionsAndBasics/LinkedList.class and b/DAKR_RND/bin/CollectionsAndBasics/LinkedList.class differ
+[1mdiff --git a/DAKR_RND/src/CollectionsAndBasics/LinkedList.java b/DAKR_RND/src/CollectionsAndBasics/LinkedList.java[m
+[1mindex fcf7b99..07b92d8 100644[m
+[1m--- a/DAKR_RND/src/CollectionsAndBasics/LinkedList.java[m
+[1m+++ b/DAKR_RND/src/CollectionsAndBasics/LinkedList.java[m
+[36m@@ -1,10 +1,95 @@[m
+ package CollectionsAndBasics;[m
+ [m
+[32m+[m[32mimport java.io.*;[m
+[32m+[m
+[32m+[m[32m//Java program to implement[m
+[32m+[m[32m//a Singly Linked List[m
+ public class LinkedList {[m
+ [m
+[31m-	public static void main(String[] args) {[m
+[31m-		// TODO Auto-generated method stub[m
+[31m-//hi[m
+[31m-	}[m
+[32m+[m[32m Node head; // head of list[m
+[32m+[m
+[32m+[m[32m // Linked list Node.[m
+[32m+[m[32m // This inner class is made static[m
+[32m+[m[32m // so that main() can access it[m
+[32m+[m[32m static class Node {[m
+[32m+[m
+[32m+[m[32m     int data;[m
+[32m+[m[32m     Node next;[m
+[32m+[m
+[32m+[m[32m     // Constructor[m
+[32m+[m[32m     Node(int d)[m
+[32m+[m[32m     {[m
+[32m+[m[32m         data = d;[m
+[32m+[m[32m         next = null;[m
+[32m+[m[32m     }[m
+[32m+[m[32m }[m
+[32m+[m
+[32m+[m[32m // Method to insert a new node[m
+[32m+[m[32m public static LinkedList insert(LinkedList list, int data)[m
+[32m+[m[32m {[m
+[32m+[m[32m     // Create a new node with given data[m
+[32m+[m[32m     Node new_node = new Node(data);[m
+[32m+[m[41m      [m
+[32m+[m
+[32m+[m[32m     // If the Linked List is empty,[m
+[32m+[m[32m     // then make the new node as head[m
+[32m+[m[32m     if (list.head == null) {[m
+[32m+[m[32m         list.head = new_node;[m
+[32m+[m[32m     }[m
+[32m+[m[32m     else {[m
+[32m+[m[32m         // Else traverse till the last node[m
+[32m+[m[32m         // and insert the new_node there[m
+[32m+[m[32m         Node last = list.head;[m
+[32m+[m[32m         while (last.next != null) {[m
+[32m+[m[32m             last = last.next;[m
+[32m+[m[32m         }[m
+[32m+[m
+[32m+[m[32m         // Insert the new_node at last node[m
+[32m+[m[32m         last.next = new_node;[m
+[32m+[m[32m     }[m
+[32m+[m
+[32m+[m[32m     // Return the list by head[m
+[32m+[m[32m     return list;[m
+[32m+[m[32m }[m
+[32m+[m
+[32m+[m[32m // Method to print the LinkedList.[m
+[32m+[m[32m public static void printList(LinkedList list)[m
+[32m+[m[32m {[m
+[32m+[m[32m     Node currNode = list.head;[m
+[32m+[m[41m [m
+[32m+[m[32m     System.out.print("LinkedList: ");[m
+[32m+[m[41m [m
+[32m+[m[32m     // Traverse through the LinkedList[m
+[32m+[m[32m     while (currNode != null) {[m
+[32m+[m[32m         // Print the data at current node[m
+[32m+[m[32m         System.out.print(currNode.data + " ");[m
+[32m+[m[41m [m
+[32m+[m[32m         // Go to next node[m
+[32m+[m[32m         currNode = currNode.next;[m
+[32m+[m[32m     }[m
+[32m+[m[32m }[m
+[32m+[m[41m [m
+[32m+[m[32m // Driver code[m
+[32m+[m[32m public static void main(String[] args)[m
+[32m+[m[32m {[m
+[32m+[m[32m     /* Start with the empty list. */[m
+[32m+[m[32m     LinkedList list = new LinkedList();[m
+[32m+[m
+[32m+[m[32m     //[m
+[32m+[m[32m     // ******INSERTION******[m
+[32m+[m[32m     //[m
+[32m+[m
+[32m+[m[32m     // Insert the values[m
+[32m+[m[32m     list = insert(list, 1);[m
+[32m+[m[32m     list = insert(list, 2);[m
+[32m+[m[32m     list = insert(list, 3);[m
+[32m+[m[32m     list = insert(list, 4);[m
+[32m+[m[32m     list = insert(list, 5);[m
+[32m+[m[32m     list = insert(list, 6);[m
+[32m+[m[32m     list = insert(list, 7);[m
+[32m+[m[32m     list = insert(list, 8);[m
+ [m
+[31m-}[m
+[32m+[m[32m     // Print the LinkedList[m
+[32m+[m[32m     printList(list);[m
+[32m+[m[32m }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
