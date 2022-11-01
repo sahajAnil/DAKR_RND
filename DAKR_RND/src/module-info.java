@@ -1,0 +1,2 @@
+module DAKR_RND {
+}
