@@ -10,6 +10,7 @@ public class wrapper {
 			System.out.println("Enter First Number");
 			// int a=in.nextInt();
 			Integer a=in.nextInt();
+			
 			System.out.println("Enter Second Number");
 			//int b=in.nextInt();
 			Integer b=in.nextInt();
