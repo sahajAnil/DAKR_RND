@@ -5,7 +5,7 @@ class InvalidAgeException  extends Exception
 {  
     public InvalidAgeException (String str)  
     {  
-        // calling the constructor of parent Exception  
+          
         super(str);  
     }  
 } 
@@ -14,7 +14,7 @@ public class MyCustom {
 	 static void validate (int age) throws InvalidAgeException{    
 		    if(age < 18){  
 
-		     // throw an object of user defined exception  
+	
 		     throw new InvalidAgeException("age is not valid to vote");    
 		     }  
 		    else {   
@@ -26,27 +26,28 @@ public class MyCustom {
 		
 		try  
         {  
-            // calling the method   
+            
             validate(19);  
         }  
         catch (InvalidAgeException ex)  
         {  
             System.out.println("Caught the exception");  
     
-            // printing the message from InvalidAgeException object  
+             
             System.out.println("Exception occured: " + ex);  
         }  
   
-        System.out.println("rest of the code...");    	try  
+        System.out.println("rest of the code...");   
+        try  
         {  
-            // calling the method   
+           
             validate(13);  
         }  
         catch (InvalidAgeException ex)  
         {  
             System.out.println("Caught the exception");  
     
-            // printing the message from InvalidAgeException object  
+           
             System.out.println("Exception occured: " + ex);  
         }  
   
