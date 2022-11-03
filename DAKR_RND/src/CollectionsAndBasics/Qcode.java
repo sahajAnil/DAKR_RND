@@ -4,7 +4,6 @@ import java.util.Iterator;
 import java.util.PriorityQueue;
 
 public class Qcode {
-	
 			public static void main(String[] args) {
 				PriorityQueue<String>queue=new PriorityQueue<>();//FIFO
 				queue.add("Siva");
