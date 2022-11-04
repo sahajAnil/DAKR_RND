@@ -1,5 +1,8 @@
 package ExceptionHandlings;
 
+import java.lang.ArithmeticException;
+import java.lang.ArrayIndexOutOfBoundsException;
+
 public class MultipleCtchBlock_Exmp1 {
 
 	public static void main(String[] args) {
