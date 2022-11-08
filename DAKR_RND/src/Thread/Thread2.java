@@ -10,10 +10,8 @@ public class Thread2 {
 		for (int i=1;i<=5500;i++) {
 			System.out.println("Thread1 :"+i);
 			if (i ==55);
-			field();
-			
+			field();		
 	}
-
 }
 
 	private static void field() {

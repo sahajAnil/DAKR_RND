@@ -13,7 +13,7 @@ public class Threadpool  implements RejectedExecutionHandler {
 	
 	 public void rejectedExecution(Runnable runnableObject, ThreadPoolExecutor executorObjet) {  
 
-		 System.out.println(runnableObject.toString() + " is rejected");  
+		 System.out.println(runnableObject.toString() + " is over");  
 	    } 
 
 }
