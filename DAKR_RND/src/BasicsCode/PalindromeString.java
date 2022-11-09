@@ -1,3 +1,9 @@
+//Check Palindrome String
+
+//A string is called a palindrome string if the reverse of that string
+//is the same as the original string.
+//Example::radar , level  {Ex no:3553, 12321}
+
 package BasicsCode;
 
 public class PalindromeString {
