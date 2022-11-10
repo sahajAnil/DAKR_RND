@@ -8,4 +8,6 @@ public class LinkedList {
 		//DAKR
 	}
 
+
+
 }
