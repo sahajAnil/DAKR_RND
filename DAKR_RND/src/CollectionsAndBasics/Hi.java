@@ -1,13 +1,10 @@
 package CollectionsAndBasics;
 
-public class LinkedList {
+public class Hi {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//hi
-		//DAKR
+System.out.println("hello");
 	}
-
-
 
 }
