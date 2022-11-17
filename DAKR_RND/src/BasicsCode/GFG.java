@@ -1,6 +1,8 @@
 //find the middle of a given LinkedList
 
-// 
+// First, we will find the total size of the linked list.
+//Then, we divide the total size by 2, and then whatever number
+//comes, we move the pointer, starting from the head node, to that number of times.
 package BasicsCode;
 
 public class GFG {
