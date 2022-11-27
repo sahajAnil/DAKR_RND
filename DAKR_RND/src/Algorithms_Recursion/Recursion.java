@@ -1,6 +1,9 @@
+//Number of Paths
+
+
 package Algorithms_Recursion;
 
-public class Factorial {
+public class Recursion {
 	
 	int fact(int n) {
 		if (n==1)
@@ -11,9 +14,8 @@ public class Factorial {
 
 	public static void main(String[] args) {
 		
-		Factorial f =new Factorial ();
-		int result =f.fact(	5);
+		Recursion r =new Recursion ();
+		int result =r.fact(	5);
 		System.out.println(result);
 	}
-
 }
